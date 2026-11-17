@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "positive-affirmations",
+  "version": "${version}",
+  "name": "Positive Affirmations",
+  "description": "The voices will never stop!",
+  "authors": [
+    "Moonlite-S"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/positive-affirmations/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "moonlite.positive_affirmations.PositiveAffirmations"
+    ],
+    "client": [
+      "moonlite.positive_affirmations.client.PositiveAffirmationsClient"
+    ]
+  },
+  "mixins": [
+    "positive-affirmations.mixins.json",
+    {
+      "config": "positive-affirmations.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
